@@ -1,0 +1,13 @@
+python -m venv venv
+venv\scripts\activate
+pip install -r requirements.txt
+pip install psycopg2
+pip install pyautogui
+pip uninstall pillow
+python -m pip install --upgrade pillow
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py collectstatic
+python manage.py runserver
+test
